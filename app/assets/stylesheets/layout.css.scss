@@ -1,0 +1,132 @@
+$width: 950px;
+$radius: 5px;
+$height: 50px;
+
+#header {
+	background-image: url(/assets/header-purple.png);
+	width: $width;
+	height: $height;
+	margin: 5px;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+
+	#header-title {
+		display: block;
+		width: 70%;
+		padding: 12px;
+		float: left;
+		position: relative;
+		top: 0px;
+		left: 0px;
+
+		a {
+			font: bold 20px Arial;
+			color: white;
+			text-decoration: none;
+
+			&:hover {
+				font-size: 25px;
+			}
+		}
+	}
+
+	#header-links {
+		float: left;
+		padding: 15px;
+
+		#header-ul {
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+
+			li {
+				display: inline;
+				a {
+					font: bold 12px Arial;
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	#header-login {
+		float: left;
+		position: relative;
+		top: 0px;
+		right: 0px;
+		margin: 15px;
+		text-align: right;
+
+		a {
+			font: bold 10px Arial;
+			text-decoration: none;
+			color: white;
+			padding: 15px;
+		}
+	}
+}
+
+#main {
+	margin: 5px;
+	width: $width;
+	height: auto;
+
+		#content {
+			background-color: #eeeeee;
+			-moz-border-radius: $radius;
+			border-radius: $radius;
+		}
+}
+
+#footer {
+	margin: 5px;
+	padding: 5px;
+	width: 940px; /* plus padding on 2 sides makes it 950 width */
+	height: 30px;
+	background-color: #bcadd4;
+	text-align: right;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+.indentmenu{
+font: bold 13px Arial;
+width: 100%; /*leave this value as is in most cases*/
+overflow: hidden;
+-moz-border-radius: $radius;
+border-radius: $radius;
+}
+
+.indentmenu ul{
+margin: 0;
+padding: 0;
+float: left;
+width: 100%; /*width of menu*/
+border: 1px solid #564c66; /*dark purple border*/
+border-width: 1px 0;
+background: black url(/assets/indentbg.gif) center center repeat-x;
+}
+
+.indentmenu ul li{
+display: inline;
+}
+
+.indentmenu ul li a{
+float: left;
+color: white; /*text color*/
+padding: 5px 11px;
+text-decoration: none;
+border-right: 1px solid #564c66; /*dark purple divider between menu items*/
+}
+
+.indentmenu ul li a:visited{
+color: white;
+}
+
+.indentmenu ul li a:hover, .indentmenu ul li .current{
+color: white !important; /*text color of selected and active item*/
+padding-top: 6px; /*shift text down 1px for selected and active item*/
+padding-bottom: 4px; /*shift text down 1px for selected and active item*/
+background: black url(/assets/indentbg2.gif) center center repeat-x;
+}

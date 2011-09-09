@@ -1,0 +1,31 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-09-08 21:20:17 -0700
+Served asset /rails.png - 304 Not Modified (65ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-09-08 21:30:22 -0700
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-08 21:30:44 -0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.haml within layouts/application (1.4ms)
+Compiled layout.css  (46ms)  (pid 32089)
+Completed 200 OK in 131ms (Views: 130.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-08 21:30:44 -0700
+Served asset /layout.css - 200 OK (2ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-08 21:30:44 -0700
+Served asset /header-purple.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/indentbg.gif" for 127.0.0.1 at 2011-09-08 21:30:44 -0700
+Served asset /indentbg.gif - 304 Not Modified (2ms)
+
+
+Started GET "/assets/indentbg2.gif" for 127.0.0.1 at 2011-09-08 21:30:48 -0700
+Served asset /indentbg2.gif - 304 Not Modified (3ms)

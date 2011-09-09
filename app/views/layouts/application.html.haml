@@ -1,0 +1,38 @@
+!!! XML
+!!!
+%html
+  %head
+    %title Welcome to iCoddle
+    = stylesheet_link_tag "layout"
+    -# %link{:rel => "stylesheet", :type => "text/css", :href => "layout.css"}
+  %body
+    #container
+      #header
+        #header-title
+          %a{:href => ""} iCoddle
+        #header-links
+          %ul#header-ul
+            %li
+              %a{:href => ""} Products
+            %li
+              %a{:href => ""} About Us
+        #header-login
+          %a{:href => ""} Login
+      #main
+        .indentmenu#tabs
+          %ul#tab-ul
+            %li
+              %a{:href => ""} Network
+            %li
+              %a{:href => ""} Pets
+            %li
+              %a{:href => ""} Vacation
+            %li
+              %a{:href => ""} Feeder
+        #content
+          = yield
+          Generic Content for now
+          Generic Content for now
+          Generic Content for now
+      #footer
+        Copyright iCoddle, Inc. 2011
