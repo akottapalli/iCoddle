@@ -40,6 +40,12 @@ group :test do
   gem 'turn', :require => false
 end
 
+group :development, :test do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+end
+
+
+# For heroku deployment
 group :production do
   gem 'pg'
 end
