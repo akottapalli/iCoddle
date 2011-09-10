@@ -29,3 +29,21 @@ Served asset /indentbg.gif - 304 Not Modified (2ms)
 
 Started GET "/assets/indentbg2.gif" for 127.0.0.1 at 2011-09-08 21:30:48 -0700
 Served asset /indentbg2.gif - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-09 20:20:46 -0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-09 20:20:48 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-09 20:20:48 -0700
+Served asset /header-purple.png - 304 Not Modified (19ms)
+
+
+Started GET "/assets/indentbg.gif" for 127.0.0.1 at 2011-09-09 20:20:48 -0700
+Served asset /indentbg.gif - 304 Not Modified (2ms)
