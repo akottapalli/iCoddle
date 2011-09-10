@@ -8,3 +8,4 @@ jquery-ui.min.js: jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js
 jquery.min.js: jquery-8a50feed8d29566738ad005e19fe1c2d.min.js
 application.js: application-a552e1db33b8be6a42eedf1261916f3c.js
 application.css: application-486a7b7c7091c10d6bb931f7639ead3d.css
+layout.css: layout-486a7b7c7091c10d6bb931f7639ead3d.css
