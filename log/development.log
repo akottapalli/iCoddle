@@ -69,3 +69,154 @@ Served asset /indentbg.gif - 304 Not Modified (0ms)
 
 Started GET "/assets/indentbg2.gif" for 127.0.0.1 at 2011-09-09 21:06:53 -0700
 Served asset /indentbg2.gif - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-13 12:43:14 -0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.haml within layouts/application (2.5ms)
+Compiled layout.css  (177ms)  (pid 21204)
+Completed 200 OK in 569ms (Views: 568.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-13 12:43:18 -0700
+Served asset /layout.css - 304 Not Modified (336ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-13 12:43:18 -0700
+Served asset /header-purple.png - 304 Not Modified (56ms)
+
+
+Started GET "/assets/indentbg.gif" for 127.0.0.1 at 2011-09-13 12:43:19 -0700
+Served asset /indentbg.gif - 304 Not Modified (99ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-13 12:43:22 -0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/landing" for 127.0.0.1 at 2011-09-13 12:50:42 -0700
+
+ActionController::RoutingError (No route matches [GET] "/landing"):
+  
+
+Rendered /home/vern/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/assets/indentbg2.gif" for 127.0.0.1 at 2011-09-13 12:51:00 -0700
+Served asset /indentbg2.gif - 200 OK (88ms)
+
+
+Started GET "/home/landing" for 127.0.0.1 at 2011-09-13 12:51:22 -0700
+  Processing by HomeController#landing as HTML
+Rendered home/landing.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-13 12:51:22 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-13 12:51:22 -0700
+Served asset /header-purple.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/indentbg.gif" for 127.0.0.1 at 2011-09-13 12:51:22 -0700
+Served asset /indentbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/home/landing" for 127.0.0.1 at 2011-09-13 12:54:52 -0700
+  Processing by HomeController#landing as HTML
+Rendered home/landing.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-13 12:54:52 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/indentbg.gif" for 127.0.0.1 at 2011-09-13 12:54:52 -0700
+Served asset /indentbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-13 12:54:52 -0700
+Served asset /header-purple.png - 304 Not Modified (0ms)
+
+
+Started GET "/home/landing" for 127.0.0.1 at 2011-09-13 12:54:57 -0700
+  Processing by HomeController#landing as HTML
+Rendered home/landing.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/landing" for 127.0.0.1 at 2011-09-13 12:58:38 -0700
+  Processing by HomeController#landing as HTML
+Rendered home/landing.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-13 12:58:38 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-13 12:58:38 -0700
+Served asset /header-purple.png - 304 Not Modified (0ms)
+
+
+Started GET "/home/landing" for 127.0.0.1 at 2011-09-13 12:58:47 -0700
+  Processing by HomeController#landing as HTML
+Rendered home/landing.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/landing" for 127.0.0.1 at 2011-09-13 13:00:31 -0700
+  Processing by HomeController#landing as HTML
+Rendered home/landing.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-13 13:00:31 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-13 13:00:31 -0700
+Served asset /header-purple.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-13 13:00:46 -0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-13 13:00:46 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-13 13:00:47 -0700
+Served asset /header-purple.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/indentbg.gif" for 127.0.0.1 at 2011-09-13 13:00:47 -0700
+Served asset /indentbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-13 13:01:07 -0700
+  Processing by HomeController#index as HTML
+Rendered home/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/landing" for 127.0.0.1 at 2011-09-13 13:03:29 -0700
+  Processing by HomeController#landing as HTML
+Rendered home/landing.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2011-09-13 13:03:29 -0700
+Served asset /layout.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/header-purple.png" for 127.0.0.1 at 2011-09-13 13:03:29 -0700
+Served asset /header-purple.png - 304 Not Modified (0ms)
