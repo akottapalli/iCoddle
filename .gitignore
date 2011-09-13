@@ -1,0 +1,10 @@
+# Ignore emacs backup files
+*~
+
+# Log files amd databases
+*.log
+*.sql
+*.sqlite3
+
+# tmp directory
+tmp
