@@ -12,7 +12,7 @@ $height: 50px;
 
 	#header-title {
 		display: block;
-		width: 70%;
+		width: 60%;
 		padding: 12px;
 		float: left;
 		position: relative;
@@ -57,12 +57,14 @@ $height: 50px;
 		right: 0px;
 		margin: 15px;
 		text-align: right;
+		padding-left: 25px;
 
 		a {
 			font: bold 10px Arial;
 			text-decoration: none;
 			color: white;
-			padding: 15px;
+			padding: 0px;
+      padding-right: 0px;
 		}
 	}
 }
@@ -76,6 +78,28 @@ $height: 50px;
 			background-color: #eeeeee;
 			-moz-border-radius: $radius;
 			border-radius: $radius;
+
+			h1 {
+			  padding: 20px;
+				margin: 0px;
+				font: bold 25px Arial;
+				color: purple; 
+				text-align: center;
+			}
+
+			form {
+  			padding: 0px;
+
+				.field, .actions {
+				  width: 30%;
+					margin: 5px;
+					padding: 10px;
+
+					label, input  {
+						margin: 5px;
+          }
+        }
+			}	 
 		}
 }
 

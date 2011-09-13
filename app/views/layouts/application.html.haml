@@ -17,7 +17,15 @@
             %li
               %a{:href => ""} About Us
         #header-login
-          %a{:href => ""} Login
+          -# %a{:href => ""} Login
+          - if current_user
+            = link_to "Edit Profile", edit_user_path(current_user.id)
+            \|
+            = link_to "Logout", :logout
+          - else          
+            = link_to "Register", new_user_path
+            \|
+            = link_to "Login", :login
       #main
         .indentmenu#tabs
           %ul#tab-ul
@@ -31,8 +39,5 @@
               %a{:href => ""} Feeder
         #content
           = yield
-          Generic Content for now
-          Generic Content for now
-          Generic Content for now
       #footer
         Copyright iCoddle, Inc. 2011
