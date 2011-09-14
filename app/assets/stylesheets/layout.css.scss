@@ -2,6 +2,15 @@ $width: 950px;
 $radius: 5px;
 $height: 50px;
 
+body {
+  text-align: center;
+  #container {
+	  text-align: left;
+    width: 950px;
+    margin: 0 auto;
+  }
+}
+
 #header {
 	background-image: url(/assets/header-purple.png);
 	width: $width;
