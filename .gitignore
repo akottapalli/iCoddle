@@ -1,5 +1,8 @@
 # Ignore emacs backup files
 *~
+# Ignore other IDE files
+.idea
+*.komodoproject
 
 # Log files amd databases
 *.log

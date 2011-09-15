@@ -1,0 +1,19 @@
+%h1 Listing leads
+
+%table
+  %tr
+    %th Email
+    %th
+    %th
+    %th
+
+  - @leads.each do |lead|
+    %tr
+      %td= lead.email
+      %td= link_to 'Show', lead
+      %td= link_to 'Edit', edit_lead_path(lead)
+      %td= link_to 'Destroy', lead, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Lead', new_lead_path

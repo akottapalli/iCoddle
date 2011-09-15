@@ -1,0 +1,16 @@
+%p Would you be interested in being a beta tester/customer for our Online Pet Care Network starting in October?
+%p If so, please provide and email where we can contact you.
+
+= form_for @lead do |f|
+  -if @lead.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@lead.errors.count, "error")} prohibited your email from being saved:"
+      %ul
+        - @lead.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :email
+    = f.text_field :email
+  .actions
+    = f.submit 'Save'
