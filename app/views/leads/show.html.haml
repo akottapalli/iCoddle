@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Email:
+  = @lead.email
+
+= link_to 'Edit', edit_lead_path(@lead)
+\|
+= link_to 'Back', leads_path
