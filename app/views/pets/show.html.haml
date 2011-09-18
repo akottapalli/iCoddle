@@ -1,0 +1,18 @@
+%h1 Pet Profile
+
+%p#notice= notice
+
+%p.pet-profile-element
+  %b Name:
+  = @pet.name
+%p.pet-profile-element
+  %b Age:
+  = @pet.age
+%p.pet-profile-element
+  %b Dob:
+  = @pet.dob
+%p.pet-profile-element
+  %b Notes:
+  = @pet.notes
+
+= link_to 'Edit', edit_pet_path(@pet)
