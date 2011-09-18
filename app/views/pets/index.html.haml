@@ -1,0 +1,17 @@
+- content_for :stylesheets do
+  = stylesheet_link_tag 'pets'
+
+%h1 Your Pets
+
+- @pets.each do |pet|
+  .pet-profile
+    = link_to pet.name, pet  
+
+.pet-create
+  = link_to 'Create Pet ...', new_pet_path  
+
+-# %td= link_to 'Show', pet
+-# %td= link_to 'Edit', edit_pet_path(pet)
+-# %td= link_to 'Destroy', pet, :confirm => 'Are you sure?', :method => :delete
+
+
