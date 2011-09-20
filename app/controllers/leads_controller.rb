@@ -1,4 +1,7 @@
 class LeadsController < ApplicationController
+
+  skip_before_filter :require_login
+
   # GET /leads
   # GET /leads.json
   def index

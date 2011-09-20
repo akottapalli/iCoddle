@@ -8,7 +8,12 @@
     = link_to pet.name, pet  
 
 .pet-create
-  = link_to 'Create Pet ...', new_pet_path  
+  = link_to 'Create Pet ...', new_pet_path
+
+.debug
+  = current_user.id
+  = current_user.username
+  = current_user.email
 
 -# %td= link_to 'Show', pet
 -# %td= link_to 'Edit', edit_pet_path(pet)
