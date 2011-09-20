@@ -16,3 +16,5 @@
   = @pet.notes
 
 = link_to 'Edit', edit_pet_path(@pet)
+\|
+= link_to 'Delete', @pet, :confirm => 'Are you sure?', :method => :delete

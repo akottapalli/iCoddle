@@ -1,5 +1,7 @@
 class UserSessionsController < ApplicationController
 
+  skip_before_filter :require_login, :only => [:new, :create]
+
   # GET /user_sessions/new
   # GET /user_sessions/new.json
   def new

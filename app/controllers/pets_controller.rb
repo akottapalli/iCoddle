@@ -2,7 +2,8 @@ class PetsController < ApplicationController
   # GET /pets
   # GET /pets.json
   def index
-    @pets = Pet.all
+    # @pets = Pet.all
+    @pets = current_user.pets
 
     respond_to do |format|
       format.html # index.html.erb
@@ -57,6 +58,7 @@ class PetsController < ApplicationController
   # PUT /pets/1.json
   def update
     @pet = Pet.find(params[:id])
+    # @pet_x = current_user.pets.where(:id => params[:id])
 
     respond_to do |format|
       if @pet.update_attributes(params[:pet])
