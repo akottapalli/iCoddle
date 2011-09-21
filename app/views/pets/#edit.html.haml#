@@ -4,4 +4,4 @@
   = render 'form'
 - else
   %p#notice
-    Please eidt profiles of your pets only or login as other user!
+    Please edit profiles of your pets only or login as other user!
