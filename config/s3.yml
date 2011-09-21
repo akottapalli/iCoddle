@@ -1,0 +1,17 @@
+development:
+  #storage: :filesystem
+  bucket: media-dev.icoddle.com
+  access_key_id: ENV['S3_KEY']
+  secret_access_key: ENV['S3_SECRET']
+
+test:
+  #storage: :filesystem
+  bucket: media-dev.icoddle.com
+  access_key_id: ENV['S3_KEY']
+  secret_access_key: ENV['S3_SECRET']
+
+production:
+  #storage: :s3
+  bucket: media.icoddle.com
+  access_key_id: ENV['S3_KEY']
+  secret_access_key: ENV['S3_SECRET']
