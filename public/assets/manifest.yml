@@ -9,3 +9,6 @@ jquery.min.js: jquery-8a50feed8d29566738ad005e19fe1c2d.min.js
 application.js: application-2280b9d68b627482821f1401c6e5ff74.js
 application.css: application-3e1252aa84881c56ac5eabd498c44ec4.css
 layout.css: layout-1c24c3292e6f847e1cbfc946f7318c2b.css
+pets.css: pets-2e74754e46a213388a11b3091425b802.css
+users.css: users-ccb8034635849c44627859332fda6a01.css
+leads.css: leads-ccb8034635849c44627859332fda6a01.css
