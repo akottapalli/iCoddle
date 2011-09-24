@@ -82,6 +82,37 @@ body {
 	margin: 5px;
 	width: $width;
 	height: auto;
+    #flash {
+      margin: 10px 0;
+			background-color: #ffffff;
+			-moz-border-radius: $radius;
+			border-radius: $radius;
+
+		  #alert {
+	      color: orange;
+	      border: 2px solid orange;
+	    }
+      #error {
+        color: red;
+        border: 2px solid red;
+      }
+      #warning {
+        color: #dddd00;
+        border: 2px solid #dddd00;
+      }
+      #notice {
+        color: green;
+        border: 2px solid green;
+      }
+      #message {
+        color: black;
+        border: 2px solid black;
+      }
+      #trace {
+        color: black;
+        border: 2px solid black;
+      }
+	  }
 
 		#content {
 			background-color: #eeeeee;
