@@ -1,0 +1,20 @@
+- if not flash.empty?
+  #flash
+    - if flash[:alert]
+      #alert
+        = flash[:alert]
+    - if flash[:error]
+      #error
+        = flash[:error]
+    - if flash[:warning]
+      #warning
+        = flash[:warning]
+    - if flash[:notice]
+      #notice
+        = flash[:notice]
+    - if flash[:message]
+      #message
+        = flash[:message]
+    - if flash[:trace]
+      #trace
+        = flash[:trace]
