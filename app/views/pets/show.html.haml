@@ -1,0 +1,26 @@
+%h1 Pet Profile
+
+%p#notice= notice
+
+- if (current_user.id == @pet.user_id)
+  %p.pet-profile-element
+    %b Name:
+    = @pet.name
+    %p.pet-profile-element
+      = link_to image_tag @pet.photo.url(:thumb)
+    %p.pet-profile-element
+      %b Age:
+      = @pet.age
+    %p.pet-profile-element
+      %b Dob:
+      = @pet.dob
+    %p.pet-profile-element
+      %b Notes:
+      = @pet.notes
+
+    = link_to 'Edit', edit_pet_path(@pet)
+    \|
+    = link_to 'Delete', @pet, :confirm => 'Are you sure?', :method => :delete
+- else
+  %p#notice
+    Please view profiles of your pets only or login as other user!

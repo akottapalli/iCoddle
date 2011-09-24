@@ -1,4 +1,6 @@
 Icoddle::Application.routes.draw do
+  resources :pets
+
   resources :leads
 
   resources :users, :user_sessions

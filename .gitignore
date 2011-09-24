@@ -1,5 +1,9 @@
 # Ignore emacs backup files
 *~
+#*
+.#*
+#*#
+
 # Ignore other IDE files
 .idea
 *.komodoproject
@@ -11,3 +15,6 @@
 
 # tmp directory
 tmp
+
+# public directory
+public/system
