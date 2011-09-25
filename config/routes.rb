@@ -1,4 +1,6 @@
 Icoddle::Application.routes.draw do
+  resources :friendships
+
   resources :pets
 
   resources :leads

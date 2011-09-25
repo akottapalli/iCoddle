@@ -55,3 +55,6 @@ end
 group :production do
   gem 'pg'
 end
+
+gem "nifty-generators", :group => :development
+gem "mocha", :group => :test

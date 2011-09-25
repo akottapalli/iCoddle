@@ -1,4 +1,20 @@
-%h1 Functionality coming soon. Stay tuned!
+%h1 Your friends
+
+-# - current_user.friendships.each do |friendship|
+-#  = friendship.friend.username
+-#  (= link_to "remove", friendship, :method => :delete)
+
+%h1= current_user.username
+  
+- @users.each do |user|
+  = user.username
+  (
+  = link_to 'Show', user
+  )|(
+  = button_to 'Add Friend', friendships_path(:friend_id => user)
+  -#, :method => :post
+  )
+
 
 %p#notice= notice 
 
