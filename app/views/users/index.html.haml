@@ -1,10 +1,15 @@
+-# = javascript_include_tag :defaults
+-# = csrf_meta_tag
+
 %h1 Your friends
 
--# - current_user.friendships.each do |friendship|
--#  = friendship.friend.username
--#  (= link_to "remove", friendship, :method => :delete)
+- current_user.friendships.each do |friendship|
+  = friendship.friend.username
+  (
+  = button_to "remove", friendship, :method => :delete
+  )
 
-%h1= current_user.username
+-# %h1= current_user.public_methods
   
 - @users.each do |user|
   = user.username
