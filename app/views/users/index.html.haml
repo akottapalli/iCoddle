@@ -2,6 +2,9 @@
 
 %p#notice= notice 
 
+%p
+	= @invitations = current_user.sent_invitations.collect(&:recipient_email)
+
 -# %table
 -#  %tr
 -#    %th
