@@ -1,7 +1,7 @@
 %h1 New Invitation
 
 = form_for @invitation do |f|
-  -# = f.error_messages
+  -# = f.errors
   %p
     = f.label :recipient_email, "Friend's email address"
     %br

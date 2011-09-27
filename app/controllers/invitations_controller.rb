@@ -4,6 +4,7 @@ class InvitationsController < ApplicationController
   end
 
   def create
+    puts params["invitation"]
     @invitation = Invitation.new(params[:invitation])
     @invitation.sender = current_user
     if @invitation.save

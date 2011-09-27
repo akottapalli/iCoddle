@@ -1,13 +1,39 @@
--# = javascript_include_tag :defaults
--# = csrf_meta_tag
+%h1 Network
 
-%h1 Your friends
+%p#notice= notice 
 
-- current_user.friendships.each do |friendship|
-  = friendship.friend.username
-  (
-  = button_to "remove", friendship, :method => :delete
-  )
+%h2 Network
+- @friendships.each do |friendship|
+  = friendship.friend.username 
+  = button_to "Remove friend", friendship, :method => :delete
+
+%h2 Add Friends to Network (Invites)
+= link_to "Add more friends", new_invitation_path
+
+%h2 Invitations Sent
+- @invitations_sent.each do |invite|
+  = invite.recipient_email
+  = ['Unregistered', 'Not Accepted', 'Declined', 'Accepted'][invite.status]
+  %br
+
+%h2 Invitations Received
+- @invitations_recv.each do |invite|
+  = User.find(invite.sender_id).username
+  = ['Unregistered', 'Not Accepted', 'Declined', 'Accepted'][invite.status]
+  %br
+
+-# %h2 Add Friends to Network (All users in system)
+-# - @other_users.each do |user|
+-#   = user.username
+-#   = button_to 'Add as Friend', friendships_path(:friend_id => user)
+
+-# %h2= current_user.email
+
+-# - current_user.friendships.each do |friendship|
+-#  = friendship.friend.username
+-#  (
+-#  = button_to "remove", friendship, :method => :delete
+-#  )
 
 -# %h1= current_user.public_methods
   
@@ -21,10 +47,8 @@
   )
 
 
-%p#notice= notice 
-
 %p
-	= @invitations = current_user.sent_invitations.collect(&:recipient_email)
+  = @invitations = current_user.sent_invitations.collect(&:recipient_email)
 
 -# %table
 -#  %tr
