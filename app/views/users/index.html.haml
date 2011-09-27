@@ -1,4 +1,25 @@
-%h1 Functionality coming soon. Stay tuned!
+-# = javascript_include_tag :defaults
+-# = csrf_meta_tag
+
+%h1 Your friends
+
+- current_user.friendships.each do |friendship|
+  = friendship.friend.username
+  (
+  = button_to "remove", friendship, :method => :delete
+  )
+
+-# %h1= current_user.public_methods
+  
+- @users.each do |user|
+  = user.username
+  (
+  = link_to 'Show', user
+  )|(
+  = button_to 'Add Friend', friendships_path(:friend_id => user)
+  -#, :method => :post
+  )
+
 
 %p#notice= notice 
 
