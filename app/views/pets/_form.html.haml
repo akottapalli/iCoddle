@@ -6,22 +6,26 @@
         - @pet.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.hidden_field :user_id, :value => current_user.id
+  .row
+    .column.grid_6
+      .field
+        = f.label :name
+        = f.text_field :name
+      .field
+        = f.label :photo
+        = f.file_field :photo
+      .field
+        = f.label :age
+        = f.text_field :age
+      .field
+        = f.label :dob
+        = f.date_select :dob
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.file_field :photo
-  .field
-    = f.label :age
-    = f.text_field :age
-  .field
-    = f.label :dob
-    = f.date_select :dob
-  .field
-    = f.label :notes
-    = f.text_area :notes
-  .actions
-    = f.submit 'Save'
+      .field
+        = f.hidden_field :user_id, :value => current_user.id
+    .column.grid_6
+      .field
+        = f.label :notes
+        = f.text_area :notes
+      .actions
+        = f.submit 'Save'

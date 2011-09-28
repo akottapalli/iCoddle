@@ -17,8 +17,13 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @pet }
+      if (current_user.id == @pet.user_id)
+        format.html # show.html.erb
+        format.json { render json: @pet }
+      else
+        flash[:error] = "You are only authorised to view your own pets' profiles. Please login as the owner to view this pet."
+        redirect_to pets_url
+      end
     end
   end
 
@@ -36,6 +41,11 @@ class PetsController < ApplicationController
   # GET /pets/1/edit
   def edit
     @pet = Pet.find(params[:id])
+
+    if (current_user.id != @pet.user_id)
+      flash[:error] = "You are only authorised to edit your own pets' profiles. Please login as the owner to edit this pet."
+      redirect_to pets_url
+    end
   end
 
   # POST /pets

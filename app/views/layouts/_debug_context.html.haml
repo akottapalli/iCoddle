@@ -1,0 +1,27 @@
+-content_for :debug_context do
+  #debug_context
+    %h1 Context Dump:
+    %p
+      Controller:
+      = params[:controller]
+    %p
+      Action:
+      = params[:action]
+    %h2 params
+    = debug(params)
+    %h2 session:
+    = debug(session)
+
+    %h2 request
+    = debug(request)
+    %h2 response:
+    = debug(response)
+
+    %h2 action_name
+    = debug(action_name)
+    %h2 cookies
+    = debug(cookies)
+    %h2 headers
+    = debug(headers)
+
+=yield :debug_context_DISABLED
