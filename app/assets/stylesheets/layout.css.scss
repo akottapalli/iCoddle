@@ -1,4 +1,7 @@
-$width: 950px;
+$width: 960px;
+$header_height: 50px;
+$content_height: 542.259px;
+$footer_height: 30px;
 $radius: 5px;
 $height: 50px;
 
@@ -6,117 +9,171 @@ body {
   text-align: center;
   #container {
 	  text-align: left;
-    width: 950px;
+    width: $width;
     margin: 0 auto;
   }
 }
 
+.grid_1 { width:60px; }
+.grid_2 { width:140px; }
+.grid_3 { width:220px; }
+.grid_4 { width:300px; }
+.grid_5 { width:380px; }
+.grid_6 { width:460px; }
+.grid_7 { width:540px; }
+.grid_8 { width:620px; }
+.grid_9 { width:700px; }
+.grid_10 { width:780px; }
+.grid_11 { width:860px; }
+.grid_12 { width:940px; }
+
+.column {
+  float: left;
+  margin: 0 10px;
+  overflow: hidden;
+  display: inline;
+}
+.row {
+  width: $width;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+input {opacity: 0.8; }
+textarea {opacity: 0.8; }
+
 #header {
 	background-image: url(/assets/header-purple.png);
 	width: $width;
-	height: $height;
-	margin: 5px;
+	height: $header_height;
 	-moz-border-radius: $radius;
 	border-radius: $radius;
 
 	#header-title {
-		display: block;
-		width: 60%;
-		padding: 12px;
-		float: left;
-		position: relative;
-		top: 0px;
-		left: 0px;
-
+	  height: $header_height;
 		a {
+		  line-height: $header_height;
+      vertical-align: middle;
 			font: bold 20px Arial;
+	    margin-top: 13px;
 			color: white;
 			text-decoration: none;
 
 			&:hover {
-				font-size: 25px;
+				font-size: 30px;
+		    padding: 10px 0;
 			}
 		}
 	}
 
+  .header-ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      display: inline;
+      border-left: 3px solid white;
+
+      a {
+        margin: 0 10px;
+        font: bold 12px Arial;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          font-size: 15px;
+        }
+      }
+
+    }
+    li:first-child {
+      border-left-style: none;
+    }
+  }
+
 	#header-links {
-		float: left;
-		padding: 15px;
-
-		#header-ul {
-			list-style-type: none;
-			margin: 0px;
-			padding: 0px;
-
-			li {
-				display: inline;
-				a {
-					font: bold 12px Arial;
-					color: white;
-					text-decoration: none;
-				}
-			}
-		}
+	  height: $header_height;
+    vertical-align: middle;
 	}
 
 	#header-login {
-		float: left;
-		position: relative;
-		top: 0px;
-		right: 0px;
-		margin: 15px;
-		text-align: right;
-		padding-left: 25px;
-
-		a {
-			font: bold 10px Arial;
-			text-decoration: none;
-			color: white;
-			padding: 0px;
-      padding-right: 0px;
-		}
+	  height: $header_height;
+    vertical-align: middle;
 	}
 }
 
 #main {
-	margin: 5px;
-	width: $width;
-	height: auto;
+  #flash {
+    margin: 10px 0;
+    background-color: #eeeeee;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
 
-		#content {
-			background-color: #eeeeee;
-			-moz-border-radius: $radius;
-			border-radius: $radius;
+    & div {
+      padding: 10px;
+    }
 
-			h1 {
-			  padding: 20px;
-				margin: 0px;
-				font: bold 25px Arial;
-				color: purple; 
-				text-align: center;
-			}
+    #alert {
+      color: orange;
+      border: 2px solid orange;
+    }
+    #error {
+      color: red;
+      border: 2px solid red;
+    }
+    #warning {
+      color: #dddd00;
+      border: 2px solid #dddd00;
+    }
+    #notice {
+      color: green;
+      border: 2px solid green;
+    }
+    #message {
+      color: black;
+      border: 2px solid black;
+    }
+    #trace {
+      color: black;
+      border: 2px solid black;
+    }
+  }
 
-			form {
-  			padding: 0px;
+  #content {
+    background-color: #fff;
+    background-image: url(/assets/iCoddle960at75.png);
+    background-repeat: no-repeat;
+    min-height: $content_height;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
 
-				.field, .actions {
-				  width: 30%;
-					margin: 5px;
-					padding: 10px;
+    h1 {
+      padding: 20px;
+      margin: 0px;
+      font: bold 25px Arial;
+      color: purple;
+      text-align: center;
+    }
 
-					label, input  {
-						margin: 5px;
-          }
+    form {
+      padding: 0px;
+
+      .field, .actions {
+        width: 30%;
+        margin: 5px;
+        padding: 10px;
+
+        label, input  {
+          margin: 5px;
         }
-			}	 
-		}
+      }
+    }
+  }
 }
 
 #footer {
-	margin: 5px;
-	padding: 5px;
-	width: 940px; /* plus padding on 2 sides makes it 950 width */
-	height: 30px;
+	height: $footer_height;
 	background-color: #bcadd4;
 	text-align: right;
 	-moz-border-radius: $radius;

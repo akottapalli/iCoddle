@@ -28,11 +28,6 @@ class LeadsController < ApplicationController
   # GET /leads/new.json
   def new
     @lead = Lead.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @lead }
-    end
   end
 
   # GET /leads/1/edit
@@ -47,7 +42,8 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { render action: 'edit', notice: 'Thank you for your interest.' }
+        flash[:notice] = 'Thank you for your interest.'
+        format.html { render action: 'edit' }
         format.json { render json: @lead, status: :created, location: @lead }
       else
         format.html { render action: "new" }
