@@ -8,7 +8,7 @@
   \.block {margin-top: 20px; margin-bottom: 20px;}
   \.highlight {font-style: italic; font-weight: bold;}
 
--content_for :youtube_video do
+-content_for :youtube_video_DISABLED do
   \<iframe width="420" height="345" src="http://www.youtube.com/embed/n53c9ZZyTkw" frameborder="0" allowfullscreen></iframe>
 
 -content_for :landing_pitch do
@@ -40,10 +40,19 @@
     %p
       %span.highlight www.iCoddle.com
 
-#landing-page
-  #landing-pitch
+#landing-page.row
+  .column.grid_1
+    &nbsp;
+  #landing-pitch.column.grid_10
     #youtube-video
       =yield :youtube_video
     =yield :landing_pitch
-  #landing-form
-    =yield :landing_form
+  .column.grid_1
+    &nbsp;
+  #landing-form.row
+    .column.grid_1
+      &nbsp;
+    .column.grid_10
+      =yield :landing_form
+    .column.grid_1
+      &nbsp;

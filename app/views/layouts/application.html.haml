@@ -9,25 +9,29 @@
       = yield :style_overrides
   %body
     #container
-      #header
-        #header-title
+      #header.row
+        #header-title.column.grid_6
           %a{:href => ""} iCoddle
-        #header-links
-          %ul#header-ul
+        #header-links.column.grid_3
+          %ul.header-ul
             %li
               %a{:href => ""} Products
             %li
               %a{:href => ""} About Us
-        #header-login
+        #header-login.column.grid_3
           -# %a{:href => ""} Login
           - if current_user
-            = link_to "Edit Profile", edit_user_path(current_user.id)
-            \|
-            = link_to "Logout", :logout
-          - else          
-            = link_to "Register", new_user_path
-            \|
-            = link_to "Login", :login
+            %ul.header-ul
+              %li
+                = link_to "Edit Profile", edit_user_path(current_user.id)
+              %li
+                = link_to "Logout", :logout
+          - else
+            %ul.header-ul
+              %li
+                = link_to "Register", new_user_path
+              %li
+                = link_to "Login", :login
       #main
         .indentmenu#tabs
           %ul#tab-ul
@@ -44,3 +48,4 @@
           = yield
       #footer
         Copyright iCoddle, Inc. 2011
+      =render 'layouts/debug_context'
