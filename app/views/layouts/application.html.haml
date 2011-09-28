@@ -7,7 +7,10 @@
     = yield :stylesheets
     %style{:type => 'text/css'}
       = yield :style_overrides
+
   %body
+    = render :partial => 'layouts/ga' if Rails.env == 'production'
+
     #container
       #header
         #header-title
