@@ -6,6 +6,12 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     #redirect_to :homepage
+    # Eventually we will not need access to @users
+    @friendships = current_user.friendships
+    @friends = current_user.friendships.collect(&:friend).collect(&:username)
+    @invitations_sent = current_user.sent_invitations
+    @invitations_recv = Invitation.where(:recipient_email => current_user.email)
+    @other_users = User.all.delete(current_user)
     @users = User.all
     respond_to do |format|
       format.html # index.html.erb
@@ -27,7 +33,10 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.json
   def new
-    @user = User.new
+    puts 'params'
+    puts params
+    @user = User.new(:invitation_token => params[:invitation_token])
+    @user.email = @user.invitation.recipient_email if @user.invitation
     @button = 'Register'
 
     respond_to do |format|
@@ -46,7 +55,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
-
+    puts params[:user]
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'Registration successful.' }

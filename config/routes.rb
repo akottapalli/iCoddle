@@ -1,4 +1,7 @@
 Icoddle::Application.routes.draw do
+  resources :invitations
+  resources :friendships
+
   resources :pets
 
   resources :leads
@@ -22,6 +25,8 @@ Icoddle::Application.routes.draw do
   match '/landing' => 'leads#new'
   match '/home' => 'home#index'
   match '/users' => 'users#index'
+
+  match '/signup/:invitation_token' => 'users#new', :as => :signup
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

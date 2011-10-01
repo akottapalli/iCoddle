@@ -1,17 +1,55 @@
-%h1 Functionality coming soon. Stay tuned!
+%h1 Network
 
--# %table
--#  %tr
--#    %th
--#    %th
--#    %th
+%p#notice= notice 
 
--#  - @users.each do |user|
--#    %tr
--#      %td= link_to 'Show', user
--#      %td= link_to 'Edit', edit_user_path(user)
--#      %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
+%h3 =current_user.username
 
--# %br
+%h2 Network
+- @friendships.each do |friendship|
+  = friendship.friend.username 
+  = button_to "Remove friend", friendship, :method => :delete
 
--# = link_to 'New User', new_user_path
+%h2 Add Friends to Network (Invites)
+= link_to "Add more friends", new_invitation_path
+
+%h2 Invitations Sent
+- @invitations_sent.each do |invite|
+  = invite.recipient_email
+  = ['Unregistered', 'Not Accepted', 'Declined', 'Accepted'][invite.status]
+  %br
+
+%h2 Invitations Received
+- @invitations_recv.each do |invite|
+  = User.find(invite.sender_id).username
+  = ['Unregistered', 'Not Accepted', 'Declined', 'Accepted'][invite.status]
+  = button_to 'Accept Invite', friendships_path(:friend_id => invite.sender_id)
+  %br
+
+-# %h2 Add Friends to Network (All users in system)
+-# - @other_users.each do |user|
+-#   = user.username
+-#   = button_to 'Add as Friend', friendships_path(:friend_id => user)
+
+-# %h2= current_user.email
+
+-# - current_user.friendships.each do |friendship|
+-#  = friendship.friend.username
+-#  (
+-#  = button_to "remove", friendship, :method => :delete
+-#  )
+
+-# %h1= current_user.public_methods
+  
+- @users.each do |user|
+  = user.username
+  (
+  = link_to 'Show', user
+  )|(
+  = button_to 'Add Friend', friendships_path(:friend_id => user)
+  -#, :method => :post
+  )
+
+
+%p
+  = @invitations = current_user.sent_invitations.collect(&:recipient_email)
+
