@@ -1,6 +1,6 @@
 class FriendshipsController < ApplicationController
   def create
-    if current_user.friendships.where(:friend_id => params[:friend_id])
+    if not current_user.friendships.where(:friend_id => params[:friend_id]).empty?
       redirect_to users_path, :notice => "Friend already in network"
     else
       @friendship = current_user.friendships.build(:friend_id => params[:friend_id])

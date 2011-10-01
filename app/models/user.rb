@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   #validates_presence_of :username, :message => 'cannot be empty'
   #validates_presence_of :invitation_id, :message => 'is required'
-  #validates_uniqueness_of :invitation_id
+  validates_uniqueness_of :invitation_id
 
   has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
   belongs_to :invitation

@@ -43,4 +43,8 @@ class Invitation < ActiveRecord::Base
     self.status = status
   end
 
+  def to_param
+    "#{token}"
+  end
+
 end

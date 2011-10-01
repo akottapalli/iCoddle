@@ -2,6 +2,8 @@
 
 %p#notice= notice 
 
+%h3 =current_user.username
+
 %h2 Network
 - @friendships.each do |friendship|
   = friendship.friend.username 
@@ -20,6 +22,7 @@
 - @invitations_recv.each do |invite|
   = User.find(invite.sender_id).username
   = ['Unregistered', 'Not Accepted', 'Declined', 'Accepted'][invite.status]
+  = button_to 'Accept Invite', friendships_path(:friend_id => invite.sender_id)
   %br
 
 -# %h2 Add Friends to Network (All users in system)
