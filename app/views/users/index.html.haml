@@ -1,15 +1,11 @@
 %h1 Network
 
-%p#notice= notice 
-
-%h3 =current_user.username
-
 %h2 Network
 - @friendships.each do |friendship|
   = friendship.friend.username 
   = button_to "Remove friend", friendship, :method => :delete
 
-%h2 Add Friends to Network (Invites)
+%h2 Send invites to friends to join network
 = link_to "Add more friends", new_invitation_path
 
 %h2 Invitations Sent
@@ -25,31 +21,13 @@
   = button_to 'Accept Invite', friendships_path(:friend_id => invite.sender_id)
   %br
 
--# %h2 Add Friends to Network (All users in system)
--# - @other_users.each do |user|
--#   = user.username
--#   = button_to 'Add as Friend', friendships_path(:friend_id => user)
-
--# %h2= current_user.email
-
--# - current_user.friendships.each do |friendship|
--#  = friendship.friend.username
--#  (
--#  = button_to "remove", friendship, :method => :delete
--#  )
-
--# %h1= current_user.public_methods
+%h2 All users in the system - will be removed
   
 - @users.each do |user|
   = user.username
-  (
-  = link_to 'Show', user
-  )|(
   = button_to 'Add Friend', friendships_path(:friend_id => user)
-  -#, :method => :post
-  )
 
 
-%p
-  = @invitations = current_user.sent_invitations.collect(&:recipient_email)
+-# %p
+-#  = @invitations = current_user.sent_invitations.collect(&:recipient_email)
 

@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    #redirect_to :homepage
     # Eventually we will not need access to @users
     @friendships = current_user.friendships
     @friends = current_user.friendships.collect(&:friend).collect(&:username)
@@ -58,7 +57,7 @@ class UsersController < ApplicationController
     puts params[:user]
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'Registration successful.' }
+        format.html { redirect_to :users, notice: 'Registration successful.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
