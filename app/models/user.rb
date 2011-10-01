@@ -1,8 +1,5 @@
 class User < ActiveRecord::Base
   acts_as_authentic 
-  #do |c|
-  #  c.validate_login_field = false
-  #end
   has_many :pets, :dependent => :destroy
   has_many :friendships
   has_many :friends, :through => :friendships
